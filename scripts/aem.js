@@ -310,8 +310,6 @@ function createOptimizedPicture(
   const url = new URL(src, window.location.href);
   const picture = document.createElement('picture');
   const { pathname } = url;
-  console.log(pathname);
-  // const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
   const ext = pathname.split('.').pop();
 
   // webp

@@ -308,7 +308,7 @@ function createOptimizedPicture(
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
   const base = !src.startsWith('http') ? window.location.href : null;
-  const url =  ? new URL(src, window.location.href);
+  const url = new URL(src, base);
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.split('.').pop();
